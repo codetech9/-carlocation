@@ -1,2 +1,13 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="text-center">Car Location</h1>
+
+<div class="banner bg-dark text-center text-white p5", style="padding: 30px">
+  <p>Nos 10 dernières voitures</p>
+</div>
+
+<div class="mt-3 container text-center">
+  <div lass="mx-auto">
+    <div class="row">
+      <%= link_to "Nos voitures", cars_path, class: "btn btn-dark col-lg-2 mx-auto" %>
+    </div>
+  </div>
+</div>

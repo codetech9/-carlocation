@@ -1,9 +1,19 @@
 <h1 class="text-center">Nos voitures</h1>
+<div class="d-flex justify-content-around", style="margin-top: 60px">
+    <% @cars.each do |car| %>
+      <%= link_to car_path(car) do %>
+        <div class="card mx-auto">
+          <div class="row">
+              <div class="col-12 p-5">
+                <ul>
+                  <li><%= car.brand %></li>
+                  <li><%= car.model %></li>
+                  <li><%= car.price %>€/jour</li>
+                </ul>
+              </div>
+          </div>
+      </div>
+      <% end %>
+    <% end %>
 
-<% @cars.each do |car| %>
-  <ul>
-    <li><%= car.brand %></li>
-    <li><%= car.model %></li>
-    <li><%= car.price %>€/jour</li>
-  </ul>
-<% end %>
+</div>
