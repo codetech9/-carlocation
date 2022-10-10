@@ -1,0 +1,9 @@
+<h1 class="text-center">Nos voitures</h1>
+
+<% @cars.each do |car| %>
+  <ul>
+    <li><%= car.brand %></li>
+    <li><%= car.model %></li>
+    <li><%= car.price %>€/jour</li>
+  </ul>
+<% end %>
