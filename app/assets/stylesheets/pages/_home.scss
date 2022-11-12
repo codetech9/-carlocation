@@ -1,14 +1,53 @@
 // Specific CSS for your home-page
 .banner {
   background-size: cover;
-  /*background-position: center;*/
-  padding: 20% 0;
+  background-position: center;
+  padding: 24% 0;
   position: relative;
 }
 
-.container{
+.ctn{
   position: absolute;
   top: 50;
   left: 50;
   margin: 0 auto;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.mcard {
+  padding: 5%;
+  background-color: whitesmoke;
+  text-align: center;
+  color:  black;
+}
+
+.footer {
+  background: #F4F4F4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(0,0,0,0.3);
+  margin-top: 30px;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: black;
+  opacity: 0.15;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
 }

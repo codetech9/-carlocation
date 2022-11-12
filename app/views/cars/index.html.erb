@@ -1,28 +1,19 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
-  </div>
+
+<div class="container my-5">
+  <%= image_tag  ("https://res.cloudinary.com/drip4exjp/image/upload/v1668193315/peugeot_rjk54m.jpg"), class: "img-fluid rounded-5" %>
 </div>
 
-<h1 class="text-center">Nos voitures</h1>
+<div class="container my-5 d-flex justify-content-start flex-column">
+  <h1 class="h1 text-start ">Nos voitures</h1>
+  <hr style="width: 100px; color: red; margin-right: 15px; margin-top: 5px;"  >
+</div>
 
-<div class="d-flex justify-content-around", style="margin-top: 60px">
+<div class="container p-3 my-5 shadow rounded-5" style="background-color: whitesmoke;">
+  <div class="d-flex justify-content-around flex-wrap p-5">
     <% @cars.each do |car| %>
-      <%= link_to car_path(car) do %>
-        <div class="card mx-auto">
-          <div class="row">
-              <div class="col-12 p-5">
-                <ul>
-                  <li><%= car.brand %></li>
-                  <li><%= car.model %></li>
-                  <li><%= car.price %>€/jour</li>
-                </ul>
-              </div>
-          </div>
-      </div>
+      <%= link_to car_path(car)  , class:"mcard shadow rounded-5" do   %>
+        <%= car.brand.capitalize %> <%= car.model.capitalize %>
       <% end %>
     <% end %>
-
+  </div>
 </div>

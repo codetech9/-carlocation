@@ -21,7 +21,8 @@ class CarsController < ApplicationController
   end
 
   def update
-    @car.update(params[:car])
+    @car.update(car_params)
+    redirect_to car_path(@car)
   end
 
   def destroy
@@ -31,7 +32,7 @@ class CarsController < ApplicationController
   private
 
   def car_params
-    params.require(:car).permit(:brand, :model, :km, :year, :options, :color, :price)
+    params.require(:car).permit(:brand, :model, :km, :year, :options, :color, :price, :photo)
   end
 
   def set_car_id
